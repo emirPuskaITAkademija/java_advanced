@@ -1,0 +1,6 @@
+Nešto od sadržaja postoji u ovom fajlu..
+Mi smo danas dosta naučili
+Imamo checked vs unchecked izuzetke
+Imamo one izuzetke koji nam ne dopuštaju kompajliranje dok ne kažemo kako ćemo izać na kraj s njim
+Odnosno takvi izuzeci moraju imati blok koda koji se izvršava i reaguje na njih.
+Drugi izuzeci nam dopuštaju kompajliranje ali nam pada program u toku izvršavanja ili u Runtime.
