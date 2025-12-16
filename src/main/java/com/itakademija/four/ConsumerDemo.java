@@ -1,9 +1,9 @@
 package com.itakademija.four;
 
-import com.itakademija.four.io.Reader;
-import com.itakademija.four.io.ReaderException;
-import com.itakademija.four.io.ReaderFactory;
-import com.itakademija.four.io.ReaderType;
+import com.itakademija.four.io.reader.Reader;
+import com.itakademija.four.io.reader.ReaderException;
+import com.itakademija.four.io.reader.ReaderFactory;
+import com.itakademija.four.io.reader.ReaderType;
 
 public class ConsumerDemo {
     public static void main(String[] args) {

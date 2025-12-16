@@ -1,6 +1,4 @@
-package com.itakademija.four.io;
-
-import java.io.IOException;
+package com.itakademija.four.io.reader;
 
 /**
  * Checked

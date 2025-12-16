@@ -1,8 +1,7 @@
-package com.itakademija.four.io;
+package com.itakademija.four.io.reader;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 
 /**
  * DECORATOR

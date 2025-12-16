@@ -1,4 +1,4 @@
-package com.itakademija.four.io;
+package com.itakademija.four.io.reader;
 
 public enum ReaderType {
     //ReaderType BYTE = new ReaderType("Byte", "Čita byte po byte");
