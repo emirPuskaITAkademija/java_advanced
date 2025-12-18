@@ -9,12 +9,20 @@ import java.io.ObjectInputStream;
  * java.io.FileInputStream byte byte -> serija bytes..
  * java.io.ObjectInputStream
  */
-class ObjectReader implements Reader {
+public class ObjectReader implements Reader {
     @Override
     public String read(String path) throws ReaderException {
         try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(path));) {
             Object readedObject = objectInputStream.readObject();
             return readedObject.toString();
+        } catch (Exception e) {
+            throw new ReaderException(e.getMessage());
+        }
+    }
+
+    public Object read(String path, int...nothing) throws ReaderException {
+        try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(path));) {
+            return objectInputStream.readObject();
         } catch (Exception e) {
             throw new ReaderException(e.getMessage());
         }

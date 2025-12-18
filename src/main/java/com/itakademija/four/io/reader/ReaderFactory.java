@@ -5,22 +5,33 @@ package com.itakademija.four.io.reader;
  */
 public class ReaderFactory {
 
-    // varijablu tipa Reader ->
     public static Reader createReader(ReaderType readerType) {
         //input u switch može biti i enumerirani tip
-        switch (readerType) {
-            case BYTE:
-                return new ByteReader();
-            case CHAR:
-                return new CharacterReader();
-            case LINE: // Reader  LineReader ->
-                return new LineReader();
-            case OBJECT:
-                return new ObjectReader();
-            default:
-                throw new IllegalArgumentException("Unknown reader type %s".formatted(readerType.getName()));
-        }
+        Reader reader = switch (readerType){
+            case BYTE -> new ByteReader();
+            case CHAR -> new CharacterReader();
+            case LINE -> new LineReader();
+            case OBJECT -> new ObjectReader();
+        };
+        return reader;
     }
+
+    // varijablu tipa Reader ->
+//    public static Reader createReader(ReaderType readerType) {
+//        //input u switch može biti i enumerirani tip
+//        switch (readerType) {
+//            case BYTE:
+//                return new ByteReader();
+//            case CHAR:
+//                return new CharacterReader();
+//            case LINE: // Reader  LineReader ->
+//                return new LineReader();
+//            case OBJECT:
+//                return new ObjectReader();
+//            default:
+//                throw new IllegalArgumentException("Unknown reader type %s".formatted(readerType.getName()));
+//        }
+//    }
 
 //    public static Reader createReader(String type) {
 //        if (type == null || type.isBlank()) {
